@@ -37,4 +37,11 @@ public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher
         }
         return flag;
     }
+
+    public static void main(String[] args){
+        String inputUserName = "admin";
+        String inputPassword = "712520dk";
+        String password = new Md5Hash(inputPassword, inputUserName, 2).toString();
+        System.out.println(password);
+    }
 }
